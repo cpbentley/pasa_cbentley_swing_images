@@ -499,11 +499,11 @@ public class JComponentAnim extends JComponent implements IGifCommadable, MouseL
 
    }
 
+   //#mdebug
    public IDLog toDLog() {
       return sc.toDLog();
    }
 
-   //#mdebug
    public String toString() {
       return Dctx.toString(this);
    }
