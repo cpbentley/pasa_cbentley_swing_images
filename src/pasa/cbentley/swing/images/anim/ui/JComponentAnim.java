@@ -19,6 +19,7 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.JComponent;
 
+import pasa.cbentley.core.src4.ctx.ToStringStaticUc;
 import pasa.cbentley.core.src4.ctx.UCtx;
 import pasa.cbentley.core.src4.interfaces.ICallBack;
 import pasa.cbentley.core.src4.interfaces.ITechTransform;
@@ -26,7 +27,6 @@ import pasa.cbentley.core.src4.logging.Dctx;
 import pasa.cbentley.core.src4.logging.IDLog;
 import pasa.cbentley.core.src4.logging.IStringable;
 import pasa.cbentley.core.src4.logging.ITechLvl;
-import pasa.cbentley.core.src4.thread.AbstractBRunnable;
 import pasa.cbentley.core.src4.thread.IBRunnable;
 import pasa.cbentley.core.src4.thread.IBRunnableListener;
 import pasa.cbentley.core.src4.thread.ITechRunnable;
@@ -438,7 +438,7 @@ public class JComponentAnim extends JComponent implements IGifCommadable, MouseL
       //be careful. we are in the runner thread
 
       //#debug
-      toDLog().pFlow("newState=" + AbstractBRunnable.toStringState(newState), this, JComponentAnim.class, "runnerNewState", ITechLvl.LVL_05_FINE, true);
+      toDLog().pFlow("newState=" + ToStringStaticUc.toStringState(newState), this, JComponentAnim.class, "runnerNewState", ITechLvl.LVL_05_FINE, true);
 
       sc.execute(new Runnable() {
          public void run() {

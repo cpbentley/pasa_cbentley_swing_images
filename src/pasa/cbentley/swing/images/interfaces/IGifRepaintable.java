@@ -4,7 +4,7 @@
  */
 package pasa.cbentley.swing.images.interfaces;
 
-public interface IRepaintable {
+public interface IGifRepaintable {
 
    /**
     * 

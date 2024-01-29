@@ -21,10 +21,10 @@ import pasa.cbentley.swing.image.DrawUtils;
 import pasa.cbentley.swing.images.ctx.ImgCtx;
 import pasa.cbentley.swing.images.interfaces.IFrameData;
 import pasa.cbentley.swing.images.interfaces.IGifCommadable;
-import pasa.cbentley.swing.images.interfaces.IRepaintable;
+import pasa.cbentley.swing.images.interfaces.IGifRepaintable;
 
 /**
- * Create by a {@link IRepaintable} UI component (e.g. JComponentAnim) 
+ * Create by a {@link IGifRepaintable} UI component (e.g. JComponentAnim) 
  * Draws on a {@link Graphics2D}.
  * 
  * Each {@link AnimationCoordinator} all method work in the UI thread.
@@ -45,7 +45,7 @@ public class AnimationCoordinator implements IGifCommadable, IStringable {
    /**
     * Where the frame is drawn
     */
-   private IRepaintable       component;
+   private IGifRepaintable       component;
 
    /**
     * Possibly null
@@ -64,7 +64,7 @@ public class AnimationCoordinator implements IGifCommadable, IStringable {
 
    private int                transform;
 
-   public AnimationCoordinator(ImgCtx imgc, IRepaintable component) {
+   public AnimationCoordinator(ImgCtx imgc, IGifRepaintable component) {
       this.imgc = imgc;
       if(component == null) {
          throw new NullPointerException();

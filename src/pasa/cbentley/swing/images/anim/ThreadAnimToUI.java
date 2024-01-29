@@ -7,12 +7,12 @@ package pasa.cbentley.swing.images.anim;
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 
+import pasa.cbentley.core.src4.ctx.ToStringStaticUc;
 import pasa.cbentley.core.src4.ctx.UCtx;
 import pasa.cbentley.core.src4.interfaces.ICallBack;
 import pasa.cbentley.core.src4.logging.Dctx;
 import pasa.cbentley.core.src4.logging.IDLog;
 import pasa.cbentley.core.src4.logging.ITechLvl;
-import pasa.cbentley.core.src4.thread.AbstractBRunnable;
 import pasa.cbentley.core.src4.thread.IBRunnable;
 import pasa.cbentley.core.src4.thread.IBRunnableListener;
 import pasa.cbentley.swing.ctx.SwingCtx;
@@ -89,7 +89,7 @@ public class ThreadAnimToUI implements IBRunnableListener, ICallBack {
 
    public void runnerNewState(IBRunnable runner, int newState) {
       //#debug
-      toDLog().pFlow("newState=" + AbstractBRunnable.toStringState(newState), this, AnimationCoordinator.class, "runnerNewState", ITechLvl.LVL_05_FINE, true);
+      toDLog().pFlow("newState=" + ToStringStaticUc.toStringState(newState), this, AnimationCoordinator.class, "runnerNewState", ITechLvl.LVL_05_FINE, true);
 
       requestPaintInUIThread();
    }
