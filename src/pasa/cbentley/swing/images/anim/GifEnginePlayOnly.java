@@ -422,7 +422,7 @@ public class GifEnginePlayOnly implements IStringable {
 
    public void setSourceToArray(InputStream is) throws IOException {
       reset();
-      BAByteOS bos = imgc.getUCtx().getIOU().convert(is);
+      BAByteOS bos = imgc.getUC().getIOU().convert(is);
       ByteArrayInputStream bis = new ByteArrayInputStream(bos.getArrayRef(), 0, bos.size());
       setSource(bis);
    }
@@ -479,7 +479,7 @@ public class GifEnginePlayOnly implements IStringable {
    }
 
    public UCtx toStringGetUCtx() {
-      return imgc.getUCtx();
+      return imgc.getUC();
    }
    //#enddebug
 

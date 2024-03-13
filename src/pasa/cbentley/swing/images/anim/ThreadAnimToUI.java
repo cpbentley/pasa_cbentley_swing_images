@@ -121,7 +121,7 @@ public class ThreadAnimToUI implements IBRunnableListener, ICallBack {
    }
 
    public UCtx toStringGetUCtx() {
-      return imgc.getUCtx();
+      return imgc.getUC();
    }
 
    private void toStringPrivate(Dctx dc) {

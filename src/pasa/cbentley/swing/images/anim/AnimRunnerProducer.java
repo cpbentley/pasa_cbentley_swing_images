@@ -44,7 +44,7 @@ public class AnimRunnerProducer extends AbstractBRunnable {
    private DoubleBuffer      buffer;
 
    public AnimRunnerProducer(ImgCtx imgc, DoubleBuffer buffer) {
-      super(imgc.getUCtx());
+      super(imgc.getUC());
       this.imgc = imgc;
       if (buffer == null) {
          throw new NullPointerException();

@@ -151,7 +151,7 @@ public class AnimOfImageFrames implements IStringable {
    public void randomStep() {
       int numFrames = producer.getNumFrames();
       if (numFrames != -1) {
-         int index = sc.getUCtx().getRandom().nextInt(numFrames);
+         int index = sc.getUC().getRandom().nextInt(numFrames);
          producer.resetTo(index);
       }
    }
@@ -205,7 +205,7 @@ public class AnimOfImageFrames implements IStringable {
    }
 
    public UCtx toStringGetUCtx() {
-      return sc.getUCtx();
+      return sc.getUC();
    }
 
    private void toStringPrivate(Dctx dc) {

@@ -126,7 +126,7 @@ public class ImageFrame implements IStringable, IFrameData {
    }
 
    public UCtx toStringGetUCtx() {
-      return sc.getUCtx();
+      return sc.getUC();
    }
 
    private void toStringPrivate(Dctx dc) {

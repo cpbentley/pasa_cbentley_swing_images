@@ -86,7 +86,7 @@ public class DoubleBuffer implements IStringable {
    }
 
    public UCtx toStringGetUCtx() {
-      return imgc.getUCtx();
+      return imgc.getUC();
    }
 
    //#enddebug

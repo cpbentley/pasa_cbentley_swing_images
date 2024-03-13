@@ -24,7 +24,7 @@ public class ImgCtx extends ACtx {
    private final SwingCtx  sc;
 
    public ImgCtx(SwingCtx sc) {
-      super(sc.getUCtx());
+      super(sc.getUC());
       this.sc = sc;
    }
 

@@ -177,7 +177,7 @@ public class AnimationCoordinator implements IGifCommadable, IStringable {
    public void cmdRandom() {
       synchronized (ia) {
          int num = ia.getNumFrames();
-         int frameIndex = imgc.getUCtx().getRandom().nextInt(num);
+         int frameIndex = imgc.getUC().getRandom().nextInt(num);
          animRunner.forceFrame(frameIndex);
          this.repaint();
       }
@@ -449,7 +449,7 @@ public class AnimationCoordinator implements IGifCommadable, IStringable {
    }
 
    public UCtx toStringGetUCtx() {
-      return imgc.getUCtx();
+      return imgc.getUC();
    }
    //#enddebug
 
